@@ -6,10 +6,10 @@ from northstar_returns.rules.refund_rules import evaluate_refund_state
 
 
 class RefundInvestigationService:
-    def __init__(self) -> None:
-        self.oms = MockOMS()
-        self.returns = MockReturnsSystem()
-        self.payments = MockPayments()
+    def __init__(self, oms=None, returns=None, payments=None) -> None:
+        self.oms = oms if oms is not None else MockOMS()
+        self.returns = returns if returns is not None else MockReturnsSystem()
+        self.payments = payments if payments is not None else MockPayments()
 
     def investigate(self, case_id: str, order_id: str) -> InvestigationResult:
         order = self.oms.get_order(order_id)

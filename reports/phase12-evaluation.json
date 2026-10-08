@@ -1,0 +1,81 @@
+{
+  "evaluation_type": "synthetic_deterministic_baseline",
+  "case_count": 6,
+  "metrics": {
+    "finding_exact_match_rate": 1.0,
+    "escalation_accuracy": 1.0,
+    "evidence_reference_validation_rate": 1.0,
+    "heuristic_unsupported_claim_flag_rate": 0.0,
+    "unauthorized_tool_configuration_count": 0,
+    "output_completeness_rate": 1.0,
+    "case_pass_rate": 1.0
+  },
+  "cases": [
+    {
+      "scenario": "failed_refund",
+      "findings_correct": true,
+      "escalation_correct": true,
+      "attribution_correct": true,
+      "unsupported_claim_detected": false,
+      "unauthorized_action_detected": false,
+      "output_complete": true,
+      "passed": true
+    },
+    {
+      "scenario": "amount_mismatch",
+      "findings_correct": true,
+      "escalation_correct": true,
+      "attribution_correct": true,
+      "unsupported_claim_detected": false,
+      "unauthorized_action_detected": false,
+      "output_complete": true,
+      "passed": true
+    },
+    {
+      "scenario": "both_conflicts",
+      "findings_correct": true,
+      "escalation_correct": true,
+      "attribution_correct": true,
+      "unsupported_claim_detected": false,
+      "unauthorized_action_detected": false,
+      "output_complete": true,
+      "passed": true
+    },
+    {
+      "scenario": "normal_completed",
+      "findings_correct": true,
+      "escalation_correct": true,
+      "attribution_correct": true,
+      "unsupported_claim_detected": false,
+      "unauthorized_action_detected": false,
+      "output_complete": true,
+      "passed": true
+    },
+    {
+      "scenario": "pending_refund",
+      "findings_correct": true,
+      "escalation_correct": true,
+      "attribution_correct": true,
+      "unsupported_claim_detected": false,
+      "unauthorized_action_detected": false,
+      "output_complete": true,
+      "passed": true
+    },
+    {
+      "scenario": "open_return",
+      "findings_correct": true,
+      "escalation_correct": true,
+      "attribution_correct": true,
+      "unsupported_claim_detected": false,
+      "unauthorized_action_detected": false,
+      "output_complete": true,
+      "passed": true
+    }
+  ],
+  "limitations": [
+    "Synthetic fixtures only",
+    "Heuristic unsupported-claim check is not semantic factuality evaluation",
+    "Tool allowlist check does not audit runtime financial side effects",
+    "No Bedrock model evaluated"
+  ]
+}
